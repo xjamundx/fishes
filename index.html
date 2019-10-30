@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script></script>
+  </head>
+
+  <body>
+    <a-scene
+      inspector="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+    >
+      <a-assets>
+        <!-- ... -->
+        <a-asset-item id="dolphin" src="dolphin/Dolphin.gltf"></a-asset-item>
+        <a-asset-item id="shark" src="shark/shark.gltf"></a-asset-item>
+        <a-asset-item id="whale" src="whale/model.gltf"></a-asset-item>
+        <a-asset-item id="dratini" src="dratini/model.gltf"></a-asset-item>
+        <a-asset-item id="goldfish" src="goldfish/goldfish.gltf"></a-asset-item>
+        <!-- <img
+          crossorigin="anonymous"
+          id="boxTexture"
+          src="https://i.imgur.com/mYmmbrp.jpg"
+        /> -->
+        <!-- <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"> -->
+        <!-- ... -->
+        <!-- <audio
+          crossorigin="anonymous"
+          src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav"
+          autoplay
+          preload
+        ></audio> -->
+      </a-assets>
+      <a-entity
+        text="value: FishesVR; color: orange"
+        position="0 3 -3"
+        scale="5.5 5.5 5.5"
+      ></a-entity>
+      <a-gltf-model
+        rotation="0 200 0"
+        position="1 1.75 -2"
+        src="#goldfish"
+        scale=".0015 .0015 .0015"
+      >
+        <a-animation
+          attribute="rotation"
+          from="0 200 0"
+          to="0 180 0"
+          direction="alternate"
+          dur="1000"
+          repeat="indefinite"
+        >
+        </a-animation
+      ></a-gltf-model>
+        
+          <a-animation
+            attribute="rotation"
+            from="0 200 0"
+            to="0 170 0"
+            direction="alternate-reverse"
+            dur="2000"
+            easing="ease-in-out-circ"
+            repeat="indefinite"
+          >
+          </a-animation
+        ></a-gltf-model>
+        <a-gltf-model
+          rotation="0 200 0"
+          position="0 1.75 -2"
+          src="#goldfish"
+          scale=".0015 .0015 .0015"
+        ><a-animation
+        attribute="rotation"
+        from="0 200 0"
+        to="0 180 0"
+        direction="alternate"
+        dur="1000"
+        repeat="indefinite"
+      >
+      </a-animation
+    ></a-gltf-model>
+        <a-gltf-model
+          rotation="0 200 0"
+          position=".5 1.75 -2"
+          src="#goldfish"
+          scale=".0015 .0015 .0015"
+        ><a-animation
+        attribute="rotation"
+        from="0 200 0"
+        to="0 180 0"
+        direction="alternate"
+        dur="1000"
+        repeat="indefinite"
+      >
+      </a-animation
+    ></a-gltf-model>
+        <a-gltf-model
+          rotation="0 200 0"
+          position="1 1.75 -2"
+          src="#goldfish"
+          scale=".0015 .0015 .0015"
+        ><a-animation
+        attribute="rotation"
+        from="0 200 0"
+        to="0 180 0"
+        direction="alternate"
+        dur="1000"
+        repeat="indefinite"
+      >
+      </a-animation
+    ></a-gltf-model>
+        <a-gltf-model
+          rotation="0 200 0"
+          position="1.5 1.75 -2"
+          src="#goldfish"
+          scale=".0015 .0015 .0015"
+        ><a-animation
+        attribute="rotation"
+        from="0 200 0"
+        to="0 180 0"
+        direction="alternate"
+        dur="1000"
+        repeat="indefinite"
+      >
+      </a-animation
+    ></a-gltf-model>
+      </a-entity>
+      <a-gltf-model
+        rotation="0 180 0"
+        position="-.6 1.2 -1.1"
+        src="#dolphin"
+        scale=".1 .1 .1"
+      >
+        <!-- <a-animation
+          attribute="rotation"
+          from="0 0 0"
+          to="360 0 0"
+          dur="2000"
+          repeat="indefinite"
+        >
+        </a-animation>
+        <a-animation
+          attribute="position"
+          to="-1 1 -3"
+          direction="alternate"
+          dur="1000"
+          repeat="indefinite"
+        >
+        </a-animation> -->
+      </a-gltf-model>
+
+      <!-- <a-entity id="rig" position="25 10 0">
+        <a-entity id="camera" camera look-controls></a-entity>
+      </a-entity> -->
+      <!-- <a-entity camera look-controls position="0 1.6 0"></a-entity> -->
+
+      <!-- <a-entity camera look-controls wasd-controls>
+        <a-entity
+          cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: black; shader: flat"
+        >
+        </a-entity>
+      </a-entity> -->
+      <a-gltf-model position="1 2 -2" src="#shark" scale=".5 .5 .5">
+        <a-animation
+          attribute="position"
+          to="0 2.2 -5"
+          direction="alternate"
+          dur="2000"
+          repeat="indefinite"
+        >
+        </a-animation>
+      </a-gltf-model>
+      <a-plane
+        shadow
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="40"
+        height="40"
+        color="#c2b280"
+      >
+        <!-- <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane> -->
+        <!-- <a-light type="ambient" color="#c2b280"></a-light> -->
+        <!-- <a-light type="point" intensity="1" position="2 4 4"></a-light> -->
+      </a-plane>
+      <a-sky color="#003355"></a-sky>
+    </a-scene>
+  </body>
+</html>
